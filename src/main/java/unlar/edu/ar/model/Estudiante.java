@@ -7,7 +7,7 @@ public class Estudiante {
     private String carrera;
     private String email;
 
-    // Constructor por defecto??
+    // Constructor por defecto
     public Estudiante() {
     }
 
@@ -53,10 +53,40 @@ public class Estudiante {
         this.email = email;
     }
 
+    
+
+
+
+
     // mostrar nombre en mayusculas
     // public String getNombreMayusculas() {
     // return nombre.toUpperCase();
     //}
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((legajo == null) ? 0 : legajo.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Estudiante other = (Estudiante) obj;
+        if (legajo == null) {
+            if (other.legajo != null)
+                return false;
+        } else if (!legajo.equals(other.legajo))
+            return false;
+        return true;
+    }
 
     @Override
     public String toString() {

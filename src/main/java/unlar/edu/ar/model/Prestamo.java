@@ -46,9 +46,6 @@ public class Prestamo {
         this.fechaDevolucion = fechaDevolucion;
     }
 
-    
-
-    
     @Override
     public int hashCode() {
         final int prime = 31;
